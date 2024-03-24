@@ -1,0 +1,22 @@
+nsd:
+  nsd:
+  - id: neo_vro_nsd
+    name: neo_vro_nsd
+    description: NEO VRO NSD
+    designer: NEO
+    version: '1.1.0'
+    virtual-link-desc:
+    - id: 5GASP
+      mgmt-network: 'true'
+    df:
+    - id: default-df
+      vnf-profile:
+      - id: '1'
+        vnfd-id: neo_vro_vnfd
+        virtual-link-connectivity:
+        - constituent-cpd-id:
+          - constituent-base-element-id: neo-vro
+            constituent-cpd-id: mgmt-vnf-ext
+          virtual-link-profile-id: 5GASP
+    vnfd-id:
+    - neo_vro_vnfd

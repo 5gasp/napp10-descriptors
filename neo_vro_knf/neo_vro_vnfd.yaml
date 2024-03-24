@@ -1,0 +1,18 @@
+vnfd:
+  id: neo_vro_vnfd
+  product-name: neo_vro_vnfd
+  description: NEO VRO VNFD
+  provider: NEO
+  version: '1.1.0'
+  df:
+  - id: default-df
+  ext-cpd:
+  - id: mgmt-vnf-ext
+    k8s-cluster-net: mgmt-net
+  mgmt-cp: mgmt-vnf-ext
+  k8s-cluster:
+    nets:
+    - id: mgmt-vnf-ext
+  kdu:
+  - name: neo-vro
+    helm-chart: 5gasp/neo-vro-helm
